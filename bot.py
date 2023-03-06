@@ -4,7 +4,7 @@ import responses
 
 async def print_response(message, user_message, is_private):
     try:
-        response = responses.make_response(user_message)
+        response = responses.make_game_response(user_message)
 
         if (is_private):
             await message.author.send(response)
@@ -15,7 +15,7 @@ async def print_response(message, user_message, is_private):
         print(e)
 
 def run_discord_bot():
-    TOKEN = 'MTA4MjMyMjIyOTQ2MDc0MjE1NA.GxiBtK.yF8cwW0fbQag5gBcPlI9GyAZCqconFIv_p0phU'
+    TOKEN = 'MTA4MjMyMjIyOTQ2MDc0MjE1NA.GurKZA.xhYE9OYaJEoQ_mqUcdDhErndZ2QvvVxfc-v6D4'
     intents = discord.Intents.default()
     intents.message_content = True
     client = discord.Client(intents = intents)
